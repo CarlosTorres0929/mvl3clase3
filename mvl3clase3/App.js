@@ -5,7 +5,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.box}>
-        <Text style={styles.text}>Dimelo papi!</Text>
+        <Text style={styles.text}>Dimelo papi que se dice!</Text>
         </View>
       <View style={styles.box2}>
         <Text style={styles.text}>Esto es Developer!</Text>
