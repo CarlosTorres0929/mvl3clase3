@@ -1,24 +1,13 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image, TextInput} from 'react-native';
 
 export default function App() {
   return (
 
     <View style={styles.container}>
-
-      <View style={styles.box1}>
-      <View style={styles.box2}>
-        </View>
-        <View style={styles.box3}>
-        </View>
-        </View>
-     
-        <View style={styles.box4}>
-        <View style={styles.box5}>
-        </View>
-        <View style={styles.box6}>
-        </View>
-        </View>
+      <Text>La demencia</Text>
+      <Image style={styles.logo} source={require('./assets/traje.png')}/>
+      <TextInput style={styles.textInput} placeholder="usuario"/>
         </View>
     
   );
@@ -28,41 +17,26 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    flexDirection: "column",
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   text: {
     color: '#fff',
   },
-  box1:{
-    flex: 1,
-    backgroundColor: '#E8930F',
-    flexDirection: 'row',
-  },
-  box2:{
-    flex: 1,
-    backgroundColor: '#B7E80F',
-  },
-  box3:{
-    flex: 1,
-    backgroundColor: '#E80F23',
-
-  },
-  box4:{
-    flex: 1,
-    backgroundColor: '#570FE8',
-    flexDirection: 'row',
-
-  },
-  box5:{
-    flex: 1,
-    backgroundColor: '#0FE8CA',
+  logo: {
+    width: 100,
+    height: 100,
     
-
   },
-  box6:{
-    flex: 1,
-    backgroundColor: '#0F1FE8',
-    
+  textInput:{
+    borderColor: '#000000',
+    borderWidth: 1,
+    borderRadius: 10,
+    paddingLeft: 20,  
+    width: 200
+  },
+  bordo:{
+ 
   }
 });
 
