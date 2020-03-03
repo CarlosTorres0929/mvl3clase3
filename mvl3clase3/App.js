@@ -1,14 +1,18 @@
-import React from 'react';
-import { StyleSheet, Text, View, Image, TextInput} from 'react-native';
+import React,{useState} from 'react';
+import { StyleSheet, Text, View, Image, TextInput, Button, Alert} from 'react-native';
 
 export default function App() {
+  const saludo = () => {Alert.alert("Que mas hermano")};
+  const [name, setName] = useState(""); 
   return (
 
     <View style={styles.container}>
-      <Text>La demencia</Text>
+      <Text>{name}</Text>
       <Image style={styles.logo} source={require('./assets/traje.png')}/>
-      <TextInput style={styles.textInput} placeholder="usuario"/>
+      <TextInput maxLength={10} style={styles.textInput} placeholder="usuario" onChangeText={(text)=>setName(text)}/>
+      <Button title="Start" onPress={saludo}></Button>
         </View>
+        
     
   );
 }
@@ -36,8 +40,13 @@ const styles = StyleSheet.create({
     width: 200,
     height: 50
   },
-  bordo:{
- 
+  boton:{
+    borderColor: '#F4D03F',
+    borderWidth: 1,
+    borderRadius: 10,
+    paddingLeft: 20,  
+    width: 200,
+    height: 50
   }
 });
 
