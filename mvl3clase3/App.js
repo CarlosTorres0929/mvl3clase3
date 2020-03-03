@@ -33,7 +33,8 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 10,
     paddingLeft: 20,  
-    width: 200
+    width: 200,
+    height: 50
   },
   bordo:{
  
